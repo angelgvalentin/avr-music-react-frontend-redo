@@ -7,8 +7,8 @@ import AllInventoryCards from "./components/AllInventoryCards";
 const App = () => {
     const [inventory, setInventory] = useState([]);
 
-    const getAllInventory = () => {
-        axios.get("http://localhost:8080/inventory").then((response) => {
+    const getAllInventory = async () => {
+        await axios.get("http://localhost:8080/inventory").then((response) => {
             setInventory(response.data);
         });
     };

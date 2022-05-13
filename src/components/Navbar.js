@@ -28,7 +28,9 @@ function Navbar() {
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled">YOUR LISTINGS</a>
+                                <a class="nav-link" href="#">
+                                    YOUR LISTINGS
+                                </a>
                             </li>
                         </ul>
                     </div>
