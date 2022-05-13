@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+
+import Navbar from "./components/Navbar";
+import CarouselBanner from "./components/CarouselBanner";
 
 function App() {
-  return (
-    <div className="App">
-      HELLO WORLD
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navbar />
+            <main id="mainContainer">
+                <CarouselBanner />
+            </main>
+        </div>
+    );
 }
 
 export default App;
