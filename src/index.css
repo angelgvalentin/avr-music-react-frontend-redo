@@ -23,8 +23,10 @@ h1 {
 }
 
 #mainContainer {
-    background-color: green;
+    /* background-color: green; */
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 95%;
     margin: 0;
 }
@@ -50,9 +52,13 @@ h1 {
 
 .carousel-banner {
     background-color: red;
-    height: 190px;
+    height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.AllInventoryCards {
+    background-color: rgb(247, 247, 247);
 }
