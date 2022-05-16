@@ -5,6 +5,11 @@ import {useState, useEffect, Fragment} from "react";
 import AllInventoryCards from "./components/AllInventoryCards";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Details from "./components/Details";
+import Guitars from "./components/Guitars";
+import Amps from "./components/Amps";
+import Pedals from "./components/Pedals";
+import SaleListings from "./components/SaleListings";
+import Cart from "./components/Cart";
 
 const App = () => {
     const [inventory, setInventory] = useState([]);
@@ -34,15 +39,12 @@ const App = () => {
                                 </>
                             }
                         ></Route>
-                        <Route
-                            path="details"
-                            element={
-                                <>
-                                    <CarouselBanner />
-                                    <Details />
-                                </>
-                            }
-                        ></Route>
+                        <Route path="details" element={<Details />}></Route>
+                        <Route path="guitars" element={<Guitars />}></Route>
+                        <Route path="amps" element={<Amps />}></Route>
+                        <Route path="pedals" element={<Pedals />}></Route>
+                        <Route path="your-listings" element={<SaleListings />}></Route>
+                        <Route path="cart" element={<Cart />}></Route>
                     </Routes>
                 </main>
             </div>
