@@ -3,13 +3,13 @@ import React from "react";
 function Navbar() {
     return (
         <div className="navbar">
-            <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">
-                                    <i class="fa-solid fa-house-chimney"></i>
+                                    <i style={{color: "white"}} class="fa-solid fa-house-chimney"></i>
                                 </a>
                             </li>
                             <li class="nav-item">

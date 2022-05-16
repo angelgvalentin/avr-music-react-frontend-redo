@@ -5,7 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-div {
+.navbar div {
     width: 100%;
 }
 
@@ -36,6 +36,7 @@ h1 {
     justify-content: space-between;
     color: white;
     background-color: black;
+    width: 100%;
 }
 
 .navbar ul {
@@ -61,4 +62,47 @@ h1 {
 
 .AllInventoryCards {
     background-color: rgb(247, 247, 247);
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.cardImageBox {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImage {
+    width: 60%;
+    padding: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    height: 20rem !important;
+}
+
+.cardPrice {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    font-weight: 800;
+}
+
+.cardLinks:hover {
+    transform: scale(1.03);
+    transition: 300ms;
+    text-decoration: none;
+}
+.grid a {
+    text-decoration: none;
+    color: black;
 }
