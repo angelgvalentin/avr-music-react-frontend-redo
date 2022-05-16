@@ -9,20 +9,14 @@ import Details from "./components/Details";
 const App = () => {
     const [inventory, setInventory] = useState([]);
 
-    const getAllInventory = () => {};
+    const getAllInventory = () => {
+        axios.get("http://localhost:8080/inventory").then((response) => {
+            setInventory(response.data);
+        });
+    };
 
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const result = await axios.get("http://localhost:8080/inventory");
-                setInventory(result.data);
-                console.log(result.data);
-            } catch (e) {
-                console.error(e);
-            }
-        }
-
-        fetchData();
+        getAllInventory();
     }, []);
 
     return (
