@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import CarouselBanner from "./components/CarouselBanner";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import {useState, useEffect, Fragment} from "react";
 import AllInventoryCards from "./components/AllInventoryCards";
@@ -10,6 +11,7 @@ import Amps from "./components/Amps";
 import Pedals from "./components/Pedals";
 import SaleListings from "./components/SaleListings";
 import Cart from "./components/Cart";
+import Navbar2 from "./components/Navbar2";
 
 const App = () => {
     const [inventory, setInventory] = useState([]);
@@ -27,7 +29,8 @@ const App = () => {
     return (
         <Router>
             <div className="App">
-                <Navbar />
+                {/* <Navbar /> */}
+                <Navbar2 />
                 <main id="mainContainer">
                     <Routes>
                         <Route
