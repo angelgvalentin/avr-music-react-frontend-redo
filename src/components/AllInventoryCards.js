@@ -12,9 +12,9 @@ const AllInventoryCards = (props) => {
             <div className="grid">
                 {cards.map((card) => {
                     return (
-                        <a href="#" className="cardLinks">
+                        <a href={"/details/" + card.id} className="cardLinks" key={card.id}>
                             {" "}
-                            <div key={card.id}>
+                            <div>
                                 <Card style={{width: "18rem"}}>
                                     <div className="cardImageBox">
                                         <img className="cardImage" src={card.image} />

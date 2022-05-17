@@ -42,10 +42,10 @@ const App = () => {
                                 </>
                             }
                         ></Route>
-                        <Route path="details" element={<Details />}></Route>
+                        <Route path="details/" element={<Details inventory={inventory} />}></Route>
                         <Route path="guitars" element={<Guitars inventory={inventory} />}></Route>
-                        <Route path="amps" element={<Amps />}></Route>
-                        <Route path="pedals" element={<Pedals />}></Route>
+                        <Route path="amps" element={<Amps inventory={inventory} />}></Route>
+                        <Route path="pedals" element={<Pedals inventory={inventory} />}></Route>
                         <Route path="your-listings" element={<SaleListings />}></Route>
                         <Route path="cart" element={<Cart />}></Route>
                     </Routes>

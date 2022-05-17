@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Details = () => {
+const Details = (props) => {
+    let inventory = props.inventory;
+
+    const [itemDetails, setItemDetails] = useState(inventory);
+
+    console.log(inventory);
+
     return <div>Details Page</div>;
 };
 
