@@ -1,7 +1,7 @@
 import {Carousel} from "bootstrap";
 import React, {useEffect, useState} from "react";
 import {Card} from "react-bootstrap";
-import {useSearchParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Pedals = (props) => {
     let inventory = props.inventory;
@@ -35,7 +35,7 @@ const Pedals = (props) => {
                         {allPedals.map((pedal) => {
                             const {id, name, image, price} = pedal;
                             return (
-                                <a href="#" className="cardLinks" key={id}>
+                                <Link to={"/details/" + id} key={id}>
                                     {" "}
                                     <div>
                                         <Card style={{width: "18rem"}}>
@@ -51,7 +51,7 @@ const Pedals = (props) => {
                                             </Card.Body>
                                         </Card>
                                     </div>
-                                </a>
+                                </Link>
                             );
                         })}
                     </div>

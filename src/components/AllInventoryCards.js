@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 import {Card} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const AllInventoryCards = (props) => {
     const [cards, SetCards] = useState(props.inventory);
@@ -11,24 +12,25 @@ const AllInventoryCards = (props) => {
 
             <div className="grid">
                 {cards.map((card) => {
+                    const {id, name, price, image} = card;
                     return (
-                        <a href={"/details/" + card.id} className="cardLinks" key={card.id}>
+                        <Link to={"/details/" + id} key={id}>
                             {" "}
                             <div>
                                 <Card style={{width: "18rem"}}>
                                     <div className="cardImageBox">
-                                        <img className="cardImage" src={card.image} />
+                                        <img className="cardImage" src={image} />
                                     </div>
 
                                     <Card.Body>
-                                        <Card.Title>{card.name}</Card.Title>
+                                        <Card.Title>{name}</Card.Title>
                                         <div className="cardPrice">
-                                            <Card.Text>${card.price}</Card.Text>
+                                            <Card.Text>${price}</Card.Text>
                                         </div>
                                     </Card.Body>
                                 </Card>
                             </div>
-                        </a>
+                        </Link>
                     );
                 })}
             </div>

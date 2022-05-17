@@ -1,13 +1,29 @@
-import React, {useState} from "react";
+import axios from "axios";
+import React, {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";
 
-const Details = (props) => {
-    let inventory = props.inventory;
+const Details = () => {
+    const params = useParams();
 
-    const [itemDetails, setItemDetails] = useState(inventory);
+    const [itemDetails, setItemDetails] = useState({});
 
-    console.log(inventory);
-
-    return <div>Details Page</div>;
+    useEffect(() => {
+        axios.get("http://localhost:8080/inventory/" + params.id).then((response) => {
+            setItemDetails(response.data);
+            console.log(" item details is " + itemDetails);
+        });
+        console.log(params);
+    }, [params]);
+    let {name, id, description, price} = itemDetails;
+    return (
+        <div>
+            <h1>Details Page: </h1>
+            <h1>Details Page: {name}</h1>
+            <h1>Details Page: {price}</h1>
+            <h1>Details Page: {description}</h1>
+            <h1>Details Page: {id}</h1>
+        </div>
+    );
 };
 
 export default Details;

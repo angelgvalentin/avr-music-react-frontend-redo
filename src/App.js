@@ -42,7 +42,7 @@ const App = () => {
                                 </>
                             }
                         ></Route>
-                        <Route path="details/" element={<Details inventory={inventory} />}></Route>
+                        <Route path="details/:id" element={<Details inventory={inventory} />}></Route>
                         <Route path="guitars" element={<Guitars inventory={inventory} />}></Route>
                         <Route path="amps" element={<Amps inventory={inventory} />}></Route>
                         <Route path="pedals" element={<Pedals inventory={inventory} />}></Route>
