@@ -13,7 +13,32 @@
     gap: 20px;
 }
 
+.image-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: solid rgba(207, 207, 207, 0.352) 1px;
+    background-color: white;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: auto;
+}
+
 .description-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: solid rgba(205, 205, 205, 0.352) 2px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
     background-color: rgb(255, 255, 255);
     padding: 20px;
     border: solid rgba(205, 205, 205, 0.352) 2px;
@@ -24,6 +49,21 @@
     padding: 20px;
 }
 
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price-tag {
+    color: rgb(185, 0, 0);
+}
+
+.stockCheck-container {
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
 .inStock-tag {
     color: green;
 }
@@ -32,9 +72,10 @@
     color: rgb(185, 0, 0);
 }
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border: solid rgba(207, 207, 207, 0.352) 1px;
+.btn-danger {
+    background-color: #ce0000;
+}
+.btn-danger:hover {
+    background-color: #ffffff !important;
+    color: #ce0000;
 }
