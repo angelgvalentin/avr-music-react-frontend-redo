@@ -5,7 +5,7 @@ import axios from "axios";
 import {useState, useEffect, Fragment} from "react";
 import AllInventoryCards from "./components/AllInventoryCards";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Details from "./components/Details";
+import Details from "./components/Details/Details";
 import Guitars from "./components/Guitars";
 import Amps from "./components/Amps";
 import Pedals from "./components/Pedals";
@@ -38,15 +38,37 @@ const App = () => {
                             element={
                                 <>
                                     <CarouselBanner />
-                                    {inventory.length === 0 || inventory.length === undefined ? <h3>Loading...</h3> : <AllInventoryCards inventory={inventory} />}
+                                    {inventory.length === 0 ||
+                                    inventory.length === undefined ? (
+                                        <h3>Loading...</h3>
+                                    ) : (
+                                        <AllInventoryCards
+                                            inventory={inventory}
+                                        />
+                                    )}
                                 </>
                             }
                         ></Route>
-                        <Route path="details/:id" element={<Details inventory={inventory} />}></Route>
-                        <Route path="guitars" element={<Guitars inventory={inventory} />}></Route>
-                        <Route path="amps" element={<Amps inventory={inventory} />}></Route>
-                        <Route path="pedals" element={<Pedals inventory={inventory} />}></Route>
-                        <Route path="your-listings" element={<SaleListings />}></Route>
+                        <Route
+                            path="details/:id"
+                            element={<Details inventory={inventory} />}
+                        ></Route>
+                        <Route
+                            path="guitars"
+                            element={<Guitars inventory={inventory} />}
+                        ></Route>
+                        <Route
+                            path="amps"
+                            element={<Amps inventory={inventory} />}
+                        ></Route>
+                        <Route
+                            path="pedals"
+                            element={<Pedals inventory={inventory} />}
+                        ></Route>
+                        <Route
+                            path="your-listings"
+                            element={<SaleListings />}
+                        ></Route>
                         <Route path="cart" element={<Cart />}></Route>
                     </Routes>
                 </main>

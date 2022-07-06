@@ -1,0 +1,40 @@
+.details-main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    gap: 25px;
+}
+
+.left-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: solid rgba(205, 205, 205, 0.352) 2px;
+}
+
+.right-container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.inStock-tag {
+    color: green;
+}
+
+.outOfStock-tag {
+    color: rgb(185, 0, 0);
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: solid rgba(207, 207, 207, 0.352) 1px;
+}
