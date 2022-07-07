@@ -39,7 +39,7 @@ const Details = () => {
                 <div className="right-container">
                     <div className="cart-container">
                         <h4>{name}</h4>
-                        <h2 className="price-tag">${price}</h2>
+                        <h2 className="price-tag">${price.toLocaleString()}</h2>
                         <div className="stockCheck-container">
                             <p>
                                 {stock > 0 ? (
