@@ -24,7 +24,8 @@ const Details = () => {
             });
         console.log(params);
     }, []);
-    let {name, id, description, price, image, stock, video} = itemDetails;
+    let {name, id, description, price, image, stock, video, brand, brandLogo} =
+        itemDetails;
 
     console.log(itemDetails[0]);
     return (
@@ -53,6 +54,13 @@ const Details = () => {
                     </div>
                     <div className="right-container">
                         <div className="cart-container">
+                            <div className="logo-container">
+                                <img
+                                    className="brand-logo-image"
+                                    src={brandLogo}
+                                    alt={brand}
+                                />
+                            </div>
                             <h4>{name}</h4>
                             <h2 className="price-tag">
                                 ${price.toLocaleString()}
