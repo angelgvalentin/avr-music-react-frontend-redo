@@ -52,40 +52,43 @@ const Details = () => {
                             <ReactPlayer url={video} />
                         </div>
                     </div>
+
                     <div className="right-container">
-                        <div className="cart-container">
-                            <div className="logo-container">
-                                <img
-                                    className="brand-logo-image"
-                                    src={brandLogo}
-                                    alt={brand}
-                                />
+                        <div className="sticky-cart-wrapper">
+                            <div className="cart-container">
+                                <div className="logo-container">
+                                    <img
+                                        className="brand-logo-image"
+                                        src={brandLogo}
+                                        alt={brand}
+                                    />
+                                </div>
+                                <h4>{name}</h4>
+                                <h2 className="price-tag">
+                                    ${price.toLocaleString()}
+                                </h2>
+                                <div className="stockCheck-container">
+                                    <p>
+                                        {stock > 0 ? (
+                                            <h3 className="inStock-tag">
+                                                In Stock & Ready to Ship
+                                            </h3>
+                                        ) : (
+                                            <h3 className="outOfStock-tag">
+                                                Currently Out of Stock
+                                            </h3>
+                                        )}
+                                    </p>
+                                    <p>
+                                        Orders placed before 3 p.m. ET usually
+                                        ship the same business day (except
+                                        weekends and holidays).
+                                    </p>
+                                </div>
+                                <Button variant="danger" size="lg">
+                                    Add to Cart
+                                </Button>{" "}
                             </div>
-                            <h4>{name}</h4>
-                            <h2 className="price-tag">
-                                ${price.toLocaleString()}
-                            </h2>
-                            <div className="stockCheck-container">
-                                <p>
-                                    {stock > 0 ? (
-                                        <h3 className="inStock-tag">
-                                            In Stock & Ready to Ship
-                                        </h3>
-                                    ) : (
-                                        <h3 className="outOfStock-tag">
-                                            Currently Out of Stock
-                                        </h3>
-                                    )}
-                                </p>
-                                <p>
-                                    Orders placed before 3 p.m. ET usually ship
-                                    the same business day (except weekends and
-                                    holidays).
-                                </p>
-                            </div>
-                            <Button variant="danger" size="lg">
-                                Add to Cart
-                            </Button>{" "}
                         </div>
                     </div>
                 </div>

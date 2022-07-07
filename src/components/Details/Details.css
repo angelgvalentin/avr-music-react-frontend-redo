@@ -61,7 +61,14 @@
     padding: 20px;
 }
 
+.sticky-cart-wrapper {
+    height: 100%;
+}
+
 .cart-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
