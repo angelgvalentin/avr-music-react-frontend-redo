@@ -19,13 +19,18 @@ const AllInventoryCards = (props) => {
                             <div>
                                 <Card style={{width: "18rem"}}>
                                     <div className="cardImageBox">
-                                        <img className="cardImage" src={image} />
+                                        <img
+                                            className="cardImage"
+                                            src={image}
+                                        />
                                     </div>
 
                                     <Card.Body>
                                         <Card.Title>{name}</Card.Title>
                                         <div className="cardPrice">
-                                            <Card.Text>${price}</Card.Text>
+                                            <Card.Text>
+                                                ${price.toLocaleString()}
+                                            </Card.Text>
                                         </div>
                                     </Card.Body>
                                 </Card>
