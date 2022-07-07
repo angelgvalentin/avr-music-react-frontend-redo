@@ -2,13 +2,18 @@ import axios from "axios";
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import "./Details.css";
-import {Button} from "react-bootstrap";
+import {Button, Modal} from "react-bootstrap";
 import ReactPlayer from "react-player";
 
 const Details = () => {
     const params = useParams();
 
     const [itemDetails, setItemDetails] = useState({});
+
+    //modal hooks and functions
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     useEffect(() => {
         axios
@@ -30,7 +35,12 @@ const Details = () => {
                 <div className="details-main-container">
                     <div className="left-container">
                         <div className="image-container">
-                            <img className="image" src={image} alt={name} />
+                            <img
+                                className="image-on-page"
+                                src={image}
+                                alt={name}
+                                onClick={handleShow}
+                            />
                         </div>
                         <div className="description-container">
                             <h4>Details Page: </h4>
@@ -72,6 +82,12 @@ const Details = () => {
                     </div>
                 </div>
             )}
+
+            <Modal show={show} onHide={handleClose}>
+                <div className="modal-image-container">
+                    <img className="image-on-modal" src={image} alt={name} />
+                </div>
+            </Modal>
         </div>
     );
 };

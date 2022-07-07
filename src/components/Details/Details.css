@@ -23,11 +23,23 @@
     padding: 20px;
 }
 
-.image {
+.image-on-page {
     display: flex;
     justify-content: center;
     width: 65%;
     height: auto;
+    cursor: pointer;
+}
+
+.image-on-modal {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    --bs-modal-width: 750px;
 }
 
 .description-container {
@@ -78,4 +90,8 @@
 .btn-danger:hover {
     background-color: #ffffff !important;
     color: #ce0000;
+}
+
+.modal-image-container {
+    width: 100%;
 }
